@@ -34,7 +34,7 @@
     "build:bundle": "rollup -c --environment BUILD:production",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "test:ci": "yarn run test:unit --ci --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test:ci": "yarn run test:unit --ci --coverage && cat ~/repo/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "version:patch": "npm version patch && npm run build:bundle",
     "version:minor": "npm version minor && npm run build:bundle",
     "version:major": "npm version major && npm run build:bundle"
