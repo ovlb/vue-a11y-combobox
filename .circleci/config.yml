@@ -38,7 +38,7 @@ jobs:
       - run:
           name: 'JavaScript Test Suite'
           # yarn here makes sure we are using the local jest binary
-          command: yarn run test:unit -- --ci --testResultsProcessor="jest-junit"
+          command: yarn run test:unit -- --ci --reporters=default --reporters=jest-junit
           environment:
             JEST_JUNIT_OUTPUT: 'reports/junit/js-test-results.xml'
       - run:
