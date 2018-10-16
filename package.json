@@ -34,6 +34,7 @@
     "build:bundle": "rollup -c --environment BUILD:production",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
+    "test:ci": "yarn run test:unit --ci --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "version:patch": "npm version patch && npm run build:bundle",
     "version:minor": "npm version minor && npm run build:bundle",
     "version:major": "npm version major && npm run build:bundle"
@@ -50,6 +51,7 @@
     "@vue/test-utils": "^1.0.0-beta.20",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^23.0.1",
+    "coveralls": "^3.0.2",
     "husky": "^1.0.0-rc.14",
     "jest-junit": "^5.2.0",
     "node-sass": "^4.9.0",

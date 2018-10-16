@@ -14,5 +14,6 @@ module.exports = {
     '**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
   ],
   reporters: ['default', 'jest-junit'],
+  collectCoverageFrom: ['src/**/*.(js|vue)', '!src/wrapper.js'],
   testURL: 'http://localhost/'
 }
