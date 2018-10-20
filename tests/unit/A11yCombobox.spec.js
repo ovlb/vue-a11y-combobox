@@ -77,6 +77,33 @@ describe('A11yCombobox.vue', () => {
     )
   })
 
+  it('emits the input value', () => {
+    wrapper.setData({ inputValue: 'test' })
+
+    wrapper.vm.onChange()
+
+    expect(wrapper.emitted().input[0]).toEqual([ 'test' ])
+  })
+
+  it('emits an event on result click', () => {
+    wrapper.vm.onResultClick(1)
+
+    expect(wrapper.emitted().foundResult).toBeTruthy()
+  })
+
+  it('emits the id of the clicked result', () => {
+    wrapper.vm.onResultClick(1)
+
+    expect(wrapper.emitted().foundResult[0]).toEqual([ items[1].id ])
+  })
+
+  it('resets focus and arrowPosition on result click', () => {
+    wrapper.vm.onResultClick(1)
+
+    expect(wrapper.vm.hasFocus).toBe(false)
+    expect(wrapper.vm.arrowPosition).toBe(-1)
+  })
+
   describe('arrow keys', () => {
     it('calls onKeyDown if pressing the down arrow key', () => {
       const stub = jest.fn()
