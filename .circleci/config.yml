@@ -28,7 +28,9 @@ jobs:
             - node_modules
           key: v1-a11y-cb-{{ .Branch }}-{{ checksum "package.json" }}
       - persist_to_workspace:
-          root: ~/repo
+          root: /home/circleci
+          paths:
+            - .
 
   test:
     <<: *defaults
