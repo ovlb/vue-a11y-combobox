@@ -2,6 +2,9 @@
 
 A Vue component that implements the [WAI-ARIA authoring practices for a Combobox](https://www.w3.org/TR/wai-aria-practices-1.1/#combobox).
 
+[![CircleCI](https://circleci.com/gh/ovlb/vue-a11y-combobox.svg?style=svg)](https://circleci.com/gh/ovlb/vue-a11y-combobox)
+[![Coverage Status](https://coveralls.io/repos/github/ovlb/vue-a11y-combobox/badge.svg?branch=develop)](https://coveralls.io/github/ovlb/vue-a11y-combobox?branch=develop)
+
 ### Preface
 
 I am no regular screenreader user. I followed the authoring practices to the best of my understanding. If something seems off, please open an [issue](https://github.com/ovlb/vue-a11y-combobox/issues/new 'New issue form of this project').
