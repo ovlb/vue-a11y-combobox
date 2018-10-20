@@ -1,5 +1,12 @@
 # Changelog
 
+## [unreleased]
+
+### Added
+
+- Workflows for CircleCi
+- Collect Test Coverage
+
 ## 0.5.0 - 2018-10-16
 
 ### Added
