@@ -41,8 +41,6 @@ jobs:
           name: 'JavaScript Test Suite'
 
           command: yarn run test:ci
-        environment:
-          JEST_JUNIT_OUTPUT: 'reports/junit/js-test-results.xml'
 
 workflows:
   version: 2
