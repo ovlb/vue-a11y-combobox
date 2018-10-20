@@ -5,7 +5,7 @@
 version: 2
 
 defaults: &defaults
-  working_directory: ~/repo
+  working_directory: ~/a11y/cb
   docker:
     # specify the version you desire here
     - image: circleci/node:8.12
@@ -28,15 +28,15 @@ jobs:
             - node_modules
           key: v1-a11y-cb-{{ .Branch }}-{{ checksum "package.json" }}
       - persist_to_workspace:
-          root: /home/circleci
+          root: ~/a11y
           paths:
-            - .
+            - cb
 
   test:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: .
+          at: ~/a11y
       - run:
           name: 'JavaScript Test Suite'
 
