@@ -3,7 +3,7 @@
 A Vue component that implements the [WAI-ARIA authoring practices for a Combobox](https://www.w3.org/TR/wai-aria-practices-1.1/#combobox).
 
 [![CircleCI](https://circleci.com/gh/ovlb/vue-a11y-combobox.svg?style=svg)](https://circleci.com/gh/ovlb/vue-a11y-combobox)
-[![Coverage Status](https://coveralls.io/repos/github/ovlb/vue-a11y-combobox/badge.svg?branch=develop)](https://coveralls.io/github/ovlb/vue-a11y-combobox?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/ovlb/vue-a11y-combobox/badge.svg?branch=develop)](https://coveralls.io/github/ovlb/vue-a11y-combobox?branch=develop) [![Greenkeeper badge](https://badges.greenkeeper.io/ovlb/vue-a11y-combobox.svg)](https://greenkeeper.io/)
 
 ### Preface
 
