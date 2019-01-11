@@ -4,10 +4,11 @@ A Vue component that implements the [WAI-ARIA authoring practices for a Combobox
 
 [![CircleCI](https://circleci.com/gh/ovlb/vue-a11y-combobox.svg?style=svg)](https://circleci.com/gh/ovlb/vue-a11y-combobox)
 [![Coverage Status](https://coveralls.io/repos/github/ovlb/vue-a11y-combobox/badge.svg?branch=develop)](https://coveralls.io/github/ovlb/vue-a11y-combobox?branch=develop)
+[![Greenkeeper badge](https://badges.greenkeeper.io/ovlb/vue-a11y-combobox.svg)](https://greenkeeper.io/)
 
 ### Preface
 
-I am no regular screenreader user. I followed the authoring practices to the best of my understanding. If something seems off, please open an [issue](https://github.com/ovlb/vue-a11y-combobox/issues/new 'New issue form of this project').
+I am no regular screenreader user. I followed the authoring practices to the best of my understanding. If something seems off, please open an [issue](https://github.com/ovlb/vue-a11y-combobox/issues/new "New issue form of this project").
 
 The current implementation only covers the _List autocomplete with manual selection_ part of the authoring practices.
 
@@ -28,7 +29,7 @@ yarn add -D vue-a11y-combobox
 Once the component is installed you need to import wherever you want to use it.
 
 ```js
-import A11yCombobox from 'vue-a11y-combobox';
+import A11yCombobox from "vue-a11y-combobox";
 ```
 
 Don’t forget to add it to the registered components (been there, done that):
@@ -74,7 +75,7 @@ By default no styles will be attached to these classes.
 Setting the `isStyled` prop to `true` will enable some default styles. Those are scoped by adding the `--is-styled` modifier to the respective element.
 These styles add some little helpers (e.g. limiting the width, removing list styles, add `position: absolute` to the list) and some minor styling.
 
-You can adapt spacing and color of the component by accessing the following Custom Properties ([supporting browsers](https://caniuse.com/#search=custom%20prop 'Support table for CSS Custom Properties')):
+You can adapt spacing and color of the component by accessing the following Custom Properties ([supporting browsers](https://caniuse.com/#search=custom%20prop "Support table for CSS Custom Properties")):
 
 | Property              | Default            |
 | --------------------- | ------------------ |
@@ -87,9 +88,9 @@ You can adapt spacing and color of the component by accessing the following Cust
 
 Contributions are always welcome.
 
-If you found a bug or want to request a feature, please open an [issue](https://github.com/ovlb/vue-a11y-combobox/issues/new 'New issue form of this project').
+If you found a bug or want to request a feature, please open an [issue](https://github.com/ovlb/vue-a11y-combobox/issues/new "New issue form of this project").
 
-If you wrote an enhancement or fixed a bug, open a Pull Request. Please follow the _Fork & Pull Request_ workflow, as [explained here](https://gist.github.com/Chaser324/ce0505fbed06b947d962 'GitHub Standard Fork & Pull Request Workflow by Chaser134').
+If you wrote an enhancement or fixed a bug, open a Pull Request. Please follow the _Fork & Pull Request_ workflow, as [explained here](https://gist.github.com/Chaser324/ce0505fbed06b947d962 "GitHub Standard Fork & Pull Request Workflow by Chaser134").
 
 Pull Requests _should_ contain unit tests. However, if you are not sure how to write these tests, please do not hesitate to open a request. We can then figure out how to add necessary tests.
 
@@ -139,4 +140,4 @@ This project is licensed under the [MIT license](LICENSE).
 
 ### Author
 
-Oscar Braunert | [@ovlb](https://github.com/ovlb 'GitHub profile of Oscar') | [www.ovl.design](www.ovl.design 'Homepage of Oscar Braunert')
+Oscar Braunert | [@ovlb](https://github.com/ovlb "GitHub profile of Oscar") | [www.ovl.design](www.ovl.design "Homepage of Oscar Braunert")
