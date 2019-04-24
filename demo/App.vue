@@ -64,7 +64,7 @@ export default {
       }, [])
     },
     showResult (id) {
-      this.activePost = this.posts.find((post) => post.id === id)
+      this.activePost = this.posts.find((post) => post.id === id);
     }
   }
 }
