@@ -7,11 +7,7 @@
     aria-owns="vCbResultList"
     aria-haspopup="listbox"
   >
-    <label
-      :class="cbClasses.label"
-      class="v-a11y-combobox__label"
-      for="cbInput"
-    > {{ inputLabel }}</label>
+    <label :class="cbClasses.label" class="v-a11y-combobox__label" for="cbInput">{{ inputLabel }}</label>
     <input
       id="cbInput"
       ref="input"
@@ -47,7 +43,7 @@
 </template>
 
 <script>
-import A11yComboboxList from './A11yComboboxList.vue'
+import A11yComboboxList from "./A11yComboboxList.vue";
 
 export default {
   components: {
@@ -71,88 +67,88 @@ export default {
       required: true
     }
   },
-  data () {
+  data() {
     return {
-      inputValue: '',
+      inputValue: "",
       hasFocus: false,
       arrowPosition: -1
-    }
+    };
   },
   computed: {
-    showsList () {
-      return Boolean(this.inputValue && this.hasFocus)
+    showsList() {
+      return Boolean(this.inputValue && this.hasFocus);
     },
-    cbClasses () {
+    cbClasses() {
       return this.isStyled
         ? {
-          base: 'v-a11y-combobox--is-styled',
-          label: 'v-a11y-combobox__label--is-styled',
-          input: 'v-a11y-combobox__input--is-styled'
-        }
-        : ''
+            base: "v-a11y-combobox--is-styled",
+            label: "v-a11y-combobox__label--is-styled",
+            input: "v-a11y-combobox__input--is-styled"
+          }
+        : "";
     }
   },
-  mounted () {
-    document.addEventListener('click', this.handleClick, false)
+  mounted() {
+    document.addEventListener("click", this.handleClick, false);
   },
-  destroyed () {
-    document.removeEventListener('click', this.handleClick, false)
+  destroyed() {
+    document.removeEventListener("click", this.handleClick, false);
   },
   methods: {
-    onChange () {
-      this.$emit('input', this.inputValue)
-      this.hasFocus = true
-      this.arrowPosition = -1
+    onChange() {
+      this.$emit("input", this.inputValue);
+      this.hasFocus = true;
+      this.arrowPosition = -1;
     },
-    onKeyDown () {
-      if (this.showsList && (this.arrowPosition < this.items.length - 1)) {
-        this.arrowPosition++
+    onKeyDown() {
+      if (this.showsList && this.arrowPosition < this.items.length - 1) {
+        this.arrowPosition++;
       }
     },
-    onKeyUp () {
+    onKeyUp() {
       if (this.showsList) {
         this.arrowPosition === -1
-          ? this.arrowPosition = this.items.length - 1
-          : this.arrowPosition = this.arrowPosition - 1
+          ? (this.arrowPosition = this.items.length - 1)
+          : (this.arrowPosition = this.arrowPosition - 1);
       }
     },
-    onEnter () {
+    onEnter() {
       if (this.arrowPosition > -1) {
-        this.$emit('foundResult', this.items[this.arrowPosition].id)
-        this.inputValue = this.items[this.arrowPosition].title
-        this.hasFocus = false
-        this.arrowPosition = -1
+        this.$emit("foundResult", this.items[this.arrowPosition].id);
+        this.inputValue = this.items[this.arrowPosition].title;
+        this.hasFocus = false;
+        this.arrowPosition = -1;
       }
     },
-    onEscape () {
-      this.arrowPosition = -1
-      this.inputValue = ''
+    onEscape() {
+      this.arrowPosition = -1;
+      this.inputValue = "";
     },
-    onResultClick (id) {
-      this.$emit('foundResult', this.items[id].id)
-      this.hasFocus = false
-      this.arrowPosition = -1
+    onResultClick(id) {
+      this.$emit("foundResult", this.items[id].id);
+      this.hasFocus = false;
+      this.arrowPosition = -1;
     },
-    handleClick (evt) {
+    handleClick(evt) {
       if (!this.$el.contains(evt.target)) {
-        this.hasFocus = false
+        this.hasFocus = false;
       }
     },
-    getId (id) {
-      return id < 0 ? false : `vCbItem_${id}`
+    getId(id) {
+      return id < 0 ? false : `vCbItem_${id}`;
     }
   },
-  provide () {
+  provide() {
     return {
       isStyled: this.isStyled,
       getId: this.getId
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="scss">
-@import 'Styles/a11y-combobox.scss';
+@import "Styles/a11y-combobox.scss";
 
 .fade-up-enter-active,
 .fade-up-move {
