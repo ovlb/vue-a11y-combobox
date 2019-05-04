@@ -26,7 +26,7 @@
   "repository": "https://github.com/ovlb/vue-a11y-combobox",
   "bugs": "https://github.com/ovlb/vue-a11y-combobox/issues",
   "engines": {
-    "node": "^8.12.0"
+    "node": "^8 || ^10"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
