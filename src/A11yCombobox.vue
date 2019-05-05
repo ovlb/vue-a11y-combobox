@@ -10,8 +10,7 @@
     <label
       :class="cbClasses.label"
       class="v-a11y-combobox__label"
-      for="cbInput"
-    > {{ inputLabel }}</label>
+      for="cbInput">{{ inputLabel }}</label>
     <input
       id="cbInput"
       ref="input"
@@ -105,15 +104,15 @@ export default {
       this.arrowPosition = -1
     },
     onKeyDown () {
-      if (this.showsList && (this.arrowPosition < this.items.length - 1)) {
+      if (this.showsList && this.arrowPosition < this.items.length - 1) {
         this.arrowPosition++
       }
     },
     onKeyUp () {
       if (this.showsList) {
         this.arrowPosition === -1
-          ? this.arrowPosition = this.items.length - 1
-          : this.arrowPosition = this.arrowPosition - 1
+          ? (this.arrowPosition = this.items.length - 1)
+          : (this.arrowPosition = this.arrowPosition - 1)
       }
     },
     onEnter () {
@@ -152,7 +151,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'Styles/a11y-combobox.scss';
+@import "Styles/a11y-combobox.scss";
 
 .fade-up-enter-active,
 .fade-up-move {
