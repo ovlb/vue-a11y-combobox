@@ -82,7 +82,7 @@ describe('A11yCombobox.vue', () => {
 
     wrapper.vm.onChange()
 
-    expect(wrapper.emitted().input[0]).toEqual([ 'test' ])
+    expect(wrapper.emitted().input[0]).toEqual(['test'])
   })
 
   it('emits an event on result click', () => {
@@ -94,7 +94,7 @@ describe('A11yCombobox.vue', () => {
   it('emits the id of the clicked result', () => {
     wrapper.vm.onResultClick(1)
 
-    expect(wrapper.emitted().foundResult[0]).toEqual([ items[1].id ])
+    expect(wrapper.emitted().foundResult[0]).toEqual([items[1].id])
   })
 
   it('resets focus and arrowPosition on result click', () => {
