@@ -1,7 +1,7 @@
 import A11yCombobox from './A11yCombobox.vue'
 
 // Declare install function executed by Vue.use()
-export function install (Vue) {
+export function install(Vue) {
   if (install.installed) return
   install.installed = true
   Vue.component('A11yCombobox', A11yCombobox)
