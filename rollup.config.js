@@ -1,3 +1,4 @@
+import commonjs from 'rollup-plugin-commonjs'
 import vue from 'rollup-plugin-vue'
 import filesize from 'rollup-plugin-filesize'
 import buble from 'rollup-plugin-buble'
@@ -11,7 +12,7 @@ export default [
       format: 'esm',
       file: 'dist/A11yCombobox.esm.js'
     },
-    plugins: [vue(), filesize()]
+    plugins: [commonjs(), vue(), filesize()]
   },
   // SSR build.
   {
@@ -20,7 +21,7 @@ export default [
       format: 'cjs',
       file: 'dist/A11yCombobox.ssr.js'
     },
-    plugins: [vue({ template: { optimizeSSR: true } }), filesize()]
+    plugins: [commonjs(), vue({ template: { optimizeSSR: true } }), filesize()]
   },
   // Browser build.
   {
@@ -31,6 +32,6 @@ export default [
       exports: 'named',
       name: 'A11yCombobox.vue'
     },
-    plugins: [vue(), buble(), terser(), filesize()]
+    plugins: [commonjs(), vue(), buble(), terser(), filesize()]
   }
 ]
