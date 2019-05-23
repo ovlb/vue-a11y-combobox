@@ -25,10 +25,10 @@
 </template>
 
 <script>
-import A11yCombobox from "@/A11yCombobox";
+import A11yCombobox from '@/A11yCombobox'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     A11yCombobox
   },
@@ -37,60 +37,60 @@ export default {
       posts: [],
       filteredPosts: [],
       activePost: null
-    };
+    }
   },
   mounted() {
-    fetch("https://jsonplaceholder.typicode.com/posts/")
+    fetch('https://jsonplaceholder.typicode.com/posts/')
       .then(response => response.json())
       .then(json => {
-        this.posts = json;
-      });
+        this.posts = json
+      })
   },
   methods: {
     filterItems(value) {
       this.filteredPosts = this.posts.reduce((acc, item) => {
         return item.title.toLowerCase().includes(value.toLowerCase())
           ? acc.concat(Object.assign({}, { id: item.id, title: item.title }))
-          : acc;
-      }, []);
+          : acc
+      }, [])
     },
     showResult(id) {
-      this.activePost = this.posts.find(post => post.id === id);
+      this.activePost = this.posts.find(post => post.id === id)
     }
   }
-};
+}
 </script>
 
 <style>
 body {
-  color: #2c3e50
-  font-family: "Avenir", Helvetica, Arial, sans-serif
-  margin: 0
-  min-height: 100vh
-  padding: 4vmin 2vmin 2vmin
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
+  color: #2c3e50;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  padding: 4vmin 2vmin 2vmin;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 .example-header {
-  align-items: center
-  display: flex
-  margin-bottom: 6vmin
+  align-items: center;
+  display: flex;
+  margin-bottom: 6vmin;
 }
 
 .example-header__logo {
-  margin-right: 0.5rem
-  max-width: 3rem
+  margin-right: 0.5rem;
+  max-width: 3rem;
 }
 
 .active-post {
-  margin: 2vmin auto
-  max-width: 60ch
+  margin: 2vmin auto;
+  max-width: 60ch;
 }
 </style>

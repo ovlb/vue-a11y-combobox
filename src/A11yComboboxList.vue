@@ -48,19 +48,16 @@ export default {
     }
   },
   computed: {
-    listClasses () {
+    listClasses() {
       return this.isStyled
         ? {
-          listClass: 'v-a11y-combobox__list--is-styled',
-          itemClass: 'v-a11y-combobox__list-item--is-styled'
-        }
+            listClass: 'v-a11y-combobox__list--is-styled',
+            itemClass: 'v-a11y-combobox__list-item--is-styled'
+          }
         : ''
     }
   },
-  inject: [
-    'isStyled',
-    'getId'
-  ]
+  inject: ['isStyled', 'getId']
 }
 </script>
 
